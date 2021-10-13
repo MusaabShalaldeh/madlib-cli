@@ -1,6 +1,6 @@
 import re
 
-template = "./assets/ExampleTemplate.txt"
+template = "assets/ExampleTemplate.txt"
 
 
 def read_template(path):
@@ -33,7 +33,7 @@ def merge_template(parsedTemplate, userAnswers):
     #return _string.format('1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1')
     return formatedString
 
-print(parse_template(read_template(template)))
+
 def start_game(_template):
     gameTemplate =  read_template(_template)
     print(f"""
@@ -55,7 +55,7 @@ def start_game(_template):
 
     print("saving your response.......")
     newSave = open("./assets/playerSave.txt",'w')
-    newSave.write(result)
+    newSave.write(result + "\n \n THIS FILE WAS GENERATED AUTOMATICALLY!!!!!!!!")
     newSave.close()
     print("Done!")
 
